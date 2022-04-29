@@ -12,6 +12,8 @@
 <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
 <div id="main_chart" style="width: 100%;height:400px;"></div>
 <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var barChart = echarts.init(document.getElementById('main_chart'));
     /*const chartData={
         title:{},
         tooltip: {},
@@ -21,63 +23,74 @@
         yAxis: {},
         series: [],
     };*/
-    const chartData={
+    var chartData={
        title: {
-           text: '销量统计图'
+           text: '该用户周内消费统计图'
        },
        tooltip: {},
        legend: {
        },
        dataset:{
            source:[
-               ['product','夏天','冬天'],
-               ['衬衫',5,10],
-               ['羊毛衫',5,25],
-               ['雪纺衫',16,34],
-               ['裤子',10,20],
-               ['高跟鞋',35,10],
-               ['袜子',20,15]
+               ['weekday','cost'],
+               ['星期一',0],
+               ['星期二',0],
+               ['星期三',0],
+               ['星期四',0],
+               ['星期五',0],
+               ['星期六',0],
+               ['星期日',0]
            ]
        },
        xAxis: {type:'category'},
        yAxis: {},
-       series: [{type:'bar'},{type:'bar'}]
+       series: [{type:'bar'}]
    };
     window.onload=function (){
-        let uid=233;
-        getChartData(uid);
+        let uid='233';
+        getbarChartData(uid);
     }
-    var getChartData=function(uid){
+    var getbarChartData=function(uid){
+        let weekArray=["星期日","星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+        let tempData=[];
+        console.log("test")
         const xhr=new XMLHttpRequest();
-        const url='';
-        let params='uid=' + uid;
+        const url='';//后端接口地址
+        let params='uid=' + uid;//get请求的参数
         //向服务器发送请求
-        xhr.open("get",url+params)
-        xhr.send();
-        xhr.onreadystatechange=function (){
+        /*xhr.open("get",url+params)
+        xhr.send();*/
+        /*xhr.onreadystatechange=function (){
             if(xhr.readyState==4){
-                if (xhr.status==200){
+                if (xhr.status==200){*/
                     console.log(xhr.responseText)
                     var result=xhr.responseText;
-                    result=JSON.parse(result);
-                }
+                    //result=JSON.parse(result);
+                    result={"2020-02-01":"1246", "2020-02-02":"1246"}
+                    console.log(result)
+                    for(let date in result){
+                        let week=weekArray[new Date(date).getDay()];
+                        //tempData.push([week,123]);
+                        console.log(tempData)
+                        chartData.dataset.source.push([week,parseInt(result[date])]);
+                        console.log(result[date])
+                        console.log(chartData.dataset.source)
+                        barChart.setOption(chartData)
+                    }
+               /* }
             }
-        }
+        }*/
     }
 
-    /*
 
-    */
-    // 基于准备好的dom，初始化echarts实例
-    const myChart = echarts.init(document.getElementById('main_chart'));
 
     // 指定图表的配置项和数据
     var option = chartData
 
     // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+    //barChart.setOption(option);
     window.onresize = function() {
-        myChart.resize();
+        barChart.resize();
     };
 </script>
 </body>
