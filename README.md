@@ -22,24 +22,24 @@ Echarts可以绘制包括但不限于：折线图、柱状图、饼图、散点�
 
 #### 2.1 柱状图
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235518424.png" alt="image-20220428235518424" style="zoom:67%;" />
+<img src="asset\image-20220428235518424.png" alt="image-20220428235518424" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235411745.png" alt="image-20220428235411745" style="zoom:67%;" />
+<img src="asset\image-20220428235411745.png" alt="image-20220428235411745" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235444789.png" alt="image-20220428235444789" style="zoom: 67%;" />
+<img src="asset\image-20220428235444789.png" alt="image-20220428235444789" style="zoom: 67%;" />
 
 #### 2.2 折线图
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235605731.png" alt="image-20220428235605731" style="zoom:67%;" />
+<img src="asset\image-20220428235605731.png" alt="image-20220428235605731" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235652094.png" alt="image-20220428235652094" style="zoom:67%;" />
+<img src="asset\image-20220428235652094.png" alt="image-20220428235652094" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235708174.png" alt="image-20220428235708174" style="zoom:67%;" />
+<img src="asset\image-20220428235708174.png" alt="image-20220428235708174" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235749314.png" alt="image-20220428235749314" style="zoom:67%;" />
+<img src="asset\image-20220428235749314.png" alt="image-20220428235749314" style="zoom:67%;" />
 
-<img src="C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235809350.png" alt="image-20220428235809350" style="zoom:67%;" />
+<img src="asset\image-20220428235809350.png" alt="image-20220428235809350" style="zoom:67%;" />
 
 #### 2.3 日历坐标系
 
-![image-20220428235929624](C:\Users\12061\AppData\Roaming\Typora\typora-user-images\image-20220428235929624.png)
+![image-20220428235929624](asset\image-20220428235929624.png)
