@@ -1,4 +1,4 @@
-
+//暂时还没用到
 /*window.onload=function (){
     var xhr=null;
     if(window.XMLHttpRequest){
